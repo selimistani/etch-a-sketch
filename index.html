@@ -25,7 +25,19 @@
             </div>
             <button class='pen-btn' id="pen-btn">Pen</button>
             <button class='pen-btn' id="eraser-btn">Eraser</button>
-            <div id="gradient-toggle"></div>
+            <div id="gradient-toggle">
+                <button class="pen-btn gradient-btn">Gradient</button>
+                <div class="toggle-container hidden">
+                  <label class="toggle-label">Lighten
+                    <input type="radio" name="gradient" value="lighten" checked>
+                    <span class="toggle-slider"></span>
+                  </label>
+                  <label class="toggle-label">Darken
+                    <input type="radio" name="gradient" value="darken">
+                    <span class="toggle-slider"></span>
+                  </label>
+                </div>
+              </div>
             <button class ='pen-btn' id="rainbow">Random</button>
         </div>
 
