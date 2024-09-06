@@ -1,44 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch-A-Sketch</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="container">
-        <div class="navbar" id="navbar-1">
-            <div id="logo">
-                <span>Paint, but Better</span>
-                <span id="logo-subtext">By Selim</span>
-            </div>
-            <div id="color-container">
-                <input type="color">
-                <span>Color</span>
-            </div>
-            <button class='pen-btn' id="pen-btn">Pen</button>
-            <button class='pen-btn' id="eraser-btn">Eraser</button>
-            <div id="gradient-toggle">
-                <button class="pen-btn gradient-btn">Gradient</button>
-                <div class="toggle-container hidden">
-                  <label class="toggle-label">Lighten
-                    <input type="radio" name="gradient" value="lighten" checked>
-                    <span class="toggle-slider"></span>
-                  </label>
-                  <label class="toggle-label">Darken
-                    <input type="radio" name="gradient" value="darken">
-                    <span class="toggle-slider"></span>
-                  </label>
-                </div>
-              </div>
-            <button class ='pen-btn' id="rainbow">Random</button>
+      <div class="navbar" id="navbar-1">
+        <div id="logo">
+          <span>Paint, but Better</span>
+          <span id="logo-subtext">By Selim</span>
         </div>
+        <div id="color-container">
+          <input id="color-picker" value="#000000" type="color" />
+          <span>Color</span>
+        </div>
+        <button class="pen-btn left" id="pen-btn">Pen</button>
+        <button class="pen-btn left" id="eraser-btn">Eraser</button>
+        <button class="pen-btn left" id="rainbow">Random</button>
+        <button class="pen-btn left" id="lighten">Lighten</button>
+        <button class="pen-btn left" id="darken">Darken</button>
+      </div>
 
-        <div class="canvas">TEST</div>
+      <div class="canvas">
+        <div class="really-canvas"></div>
+      </div>
+
+      <div class="navbar" id="navbar-2">
+        <h3 id="slider-label"></h3>
+        <div class="slider-box">
+          <span>100x100</span>
+          <input
+            type="range"
+            orient="vertical"
+            min="1"
+            max="100"
+            value="50"
+            id="range-slider"
+          />
+          <span>1x1</span>
+        </div>
+        <div class="pen-btn" id="grid-toggle">
+          Grid:<span><b id="grid-text">on</b></span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
